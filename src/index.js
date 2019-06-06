@@ -4,32 +4,7 @@ import styled, { ThemeProvider } from "styled-components";
 import theme from "styled-theming";
 import { darken } from "polished";
 
-const bgrModes = {
-  light: "#fff",
-  medium: "#ccc",
-  dark: "#000",
-  red: "#f00",
-  green: "#0f0",
-  blue: "#00f"
-};
-
-const colorModes = {
-  light: "#000",
-  medium: "#333",
-  dark: "#fff",
-  red: "#fff",
-  green: "#000",
-  blue: "#fff"
-};
-
-const radiuses = {
-  light: "2%",
-  medium: "10px",
-  dark: "200px",
-  red: "50%",
-  green: "15%",
-  blue: "30px"
-};
+import { bgrModes, colorModes, radiuses } from "./design-system";
 
 const boxBackgroundColor = theme("mode", bgrModes);
 const boxColor = theme("mode", colorModes);
