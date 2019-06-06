@@ -2,28 +2,48 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "styled-theming";
+import { darken } from "polished";
 
 const bgrModes = {
   light: "#fff",
   medium: "#ccc",
-  dark: "#000"
+  dark: "#000",
+  red: "#f00",
+  green: "#0f0",
+  blue: "#00f"
 };
 
 const colorModes = {
   light: "#000",
   medium: "#333",
-  dark: "#fff"
+  dark: "#fff",
+  red: "#fff",
+  green: "#000",
+  blue: "#fff"
+};
+
+const radiuses = {
+  light: "2%",
+  medium: "10px",
+  dark: "200px",
+  red: "50%",
+  green: "15%",
+  blue: "30px"
 };
 
 const boxBackgroundColor = theme("mode", bgrModes);
 const boxColor = theme("mode", colorModes);
+const boxRadius = theme("mode", radiuses);
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 const Box = styled.div`
-  border: 2px solid #ccc;
+  font-family: sans-serif;
+  transition: all 0.5s ease;
+  border: 3px solid ${darken(0.333, "#fff")};
+  border-radius: ${boxRadius};
   padding: 3rem;
   color: ${boxColor};
   background-color: ${boxBackgroundColor};
