@@ -41,7 +41,7 @@ const Container = styled.div`
 `;
 const Box = styled.div`
   font-family: sans-serif;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   border: 3px solid ${darken(0.333, "#fff")};
   border-radius: ${boxRadius};
   padding: 3rem;
